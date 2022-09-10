@@ -1,18 +1,20 @@
 import React from "react";
 import { Input } from "components";
 
-const InputValidation = ({
-  isError = {
-    value: false,
-    message: "",
-  },
-  hookForm = {},
-  label = "",
-  className,
-  ...props
-}) => {
-  return (
-    <div className="form-control w-full max-w-xs">
+const InputValidation = React.forwardRef(
+  (
+    {
+      isError = {
+        value: false,
+        message: "",
+      },
+      label = "",
+      className,
+      ...props
+    },
+    ref,
+  ) => (
+    <div ref={ref} className="form-control w-full max-w-xs">
       {label && (
         <label className="label">
           <span className={`label-text ${isError?.value ? "text-error" : ""}`}>
@@ -22,7 +24,6 @@ const InputValidation = ({
       )}
       <Input
         {...props}
-        hookForm={hookForm}
         className={
           className
             ? className
@@ -37,7 +38,7 @@ const InputValidation = ({
         </label>
       )}
     </div>
-  );
-};
+  ),
+);
 
 export default InputValidation;

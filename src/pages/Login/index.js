@@ -28,7 +28,7 @@ const Login = () => {
         <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
           <div className="space-y-2">
             <InputValidation
-              hookForm={register("email", {
+              {...register("email", {
                 required: { value: true, message: "Email wajib diisi" },
                 pattern: {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -41,7 +41,7 @@ const Login = () => {
               isError={{ value: errors.email, message: errors.email?.message }}
             />
             <InputValidation
-              hookForm={register("password", {
+              {...register("password", {
                 required: { value: true, message: "Password wajib diisi" },
                 minLength: {
                   value: 8,
@@ -56,32 +56,6 @@ const Login = () => {
                 message: errors.password?.message,
               }}
             />
-            {/* <div className="form-control w-full max-w-xs">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
-              <input
-                {...register("password", {
-                  required: { value: true, message: "Password wajib diisi" },
-                  minLength: {
-                    value: 8,
-                    message: "Password minimal 8 karakter",
-                  },
-                })}
-                type="text"
-                placeholder="123456789"
-                className={`input w-full max-w-xs ${
-                  errors.password ? "input-error" : "input-bordered"
-                }`}
-              />
-              {errors.password && (
-                <label className="label">
-                  <span className="label-text-alt text-error">
-                    {errors.password?.message}
-                  </span>
-                </label>
-              )}
-            </div> */}
           </div>
           <div className="card-actions justify-end">
             <Button label="Masuk" theme="primary" type="submit" />

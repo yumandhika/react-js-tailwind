@@ -18,6 +18,7 @@ module.exports = {
   rules: {
     "react/prop-types": 0,
     "react/no-unknown-property": 0,
+    "react/display-name": 0,
     "no-use-before-define": "off",
     "import/extensions": "off",
     "no-unused-vars": "off",

@@ -1,7 +1,9 @@
 import React from "react";
 
-const Input = ({ className = "", hookForm = {}, ...props }) => {
-  return <input {...hookForm} {...props} className={className} />;
-};
+const Input = React.forwardRef(
+  ({ className = "", hookForm = {}, ...props }, ref) => (
+    <input ref={ref} {...hookForm} {...props} className={className} />
+  ),
+);
 
 export default Input;

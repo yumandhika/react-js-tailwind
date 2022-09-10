@@ -8,8 +8,9 @@ const Header = () => {
   const onLogout = () => {
     dispatch(setToken(""));
   };
+
   return (
-    <div className="navbar border-b sticky top-0 bg-white">
+    <nav className="navbar border-b sticky top-0 bg-white">
       <div className="flex-1">
         <a className="btn btn-ghost normal-case text-xl">CMS</a>
       </div>
@@ -30,7 +31,7 @@ const Header = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
