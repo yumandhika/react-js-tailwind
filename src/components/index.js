@@ -8,6 +8,7 @@ import InputValidation from "./molecules/InputValidation";
 
 // organisms
 import Header from "./organisms/Header";
+import Footer from "./organisms/Footer";
 import Sidebar from "./organisms/Sidebar";
 
 // templates
@@ -23,4 +24,5 @@ export {
   Sidebar,
   BasicLayout,
   AuthLayout,
+  Footer,
 };

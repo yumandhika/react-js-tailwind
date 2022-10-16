@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Header, Sidebar } from "components";
+import { Header, Sidebar, Footer } from "components";
 
 const BasicLayout = ({ children }) => {
   return (
@@ -21,6 +21,7 @@ const BasicLayout = ({ children }) => {
       <div className="flex flex-col h-screen">
         <Header />
         <Sidebar>{children}</Sidebar>
+        <Footer/>
       </div>
     </div>
   );
