@@ -2,6 +2,7 @@
 import Button from "./atoms/Button";
 import Label from "./atoms/Label";
 import Input from "./atoms/Input";
+import CountdownTimer from "./atoms/CountdownTimer";
 
 // molecules
 import InputValidation from "./molecules/InputValidation";
@@ -25,4 +26,5 @@ export {
   BasicLayout,
   AuthLayout,
   Footer,
+  CountdownTimer,
 };

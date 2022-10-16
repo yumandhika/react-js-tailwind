@@ -1,5 +1,6 @@
 import React from "react";
 import _ from "lodash";
+import { CountdownTimer } from "components";
 
 const Dashboard = () => {
   return (
@@ -105,6 +106,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+      <CountdownTimer/>
       <div className="carousel carousel-center p-4 space-x-4">
         {_.map(Array(3), (val, key) => (
           <div className="carousel-item" key={key}>
