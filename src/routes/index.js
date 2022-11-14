@@ -27,18 +27,14 @@ const Routes = () => {
               key={key}
               path={val.path}
               element={
-                !token ? (
-                  <AuthLayout>
-                    <Component />
-                  </AuthLayout>
-                ) : (
-                  <Navigate to={"/dashboard"} />
-                )
+                <BasicLayout>
+                  <Component />
+                </BasicLayout>
               }
             />
           );
         })}
-        {_.map(_.filter(route, { routeType: "private" }), (val, key) => {
+        {/* {_.map(_.filter(route, { routeType: "private" }), (val, key) => {
           const Component = val.element;
           return (
             <Route
@@ -56,7 +52,7 @@ const Routes = () => {
               }
             />
           );
-        })}
+        })} */}
         <Route path="*" element={<My404Component />} />
       </WrapperRoutes>
     </Router>

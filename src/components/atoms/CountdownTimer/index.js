@@ -11,7 +11,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
       return <Completionist />;
     } else {
       // Render a countdown
-      return <span>{days} / {hours}:{minutes}:{seconds}</span>;
+      return <span>{days} Days | {hours}:{minutes}:{seconds}</span>;
     }
   };
 
